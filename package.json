@@ -1,0 +1,13 @@
+{
+  "name": "file-predict",
+  "type": "module",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "predict": "node index.js predict"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "magika": "^0.2.5"
+  }
+}
