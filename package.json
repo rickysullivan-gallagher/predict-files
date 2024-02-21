@@ -1,5 +1,9 @@
 {
   "name": "file-predict",
+  "author": {
+    "email": "ricky.sullivan@gallagher.com",
+    "name": "Ricky Sullivan"
+  },
   "type": "module",
   "private": true,
   "main": "index.js",
