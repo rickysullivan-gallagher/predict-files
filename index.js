@@ -33,7 +33,7 @@ program
   .action(async (files, options) => {
     const predictions = await Promise.all(files.map(makePrediction));
     if (options.format === 'json') {
-      const output = options.pretty ? JSON.stringify(predictions, null, 2) : JSON.stringify(predictions);
+      const output = options.pretty ? JSON.stringify(predictions, null, 2) : predictions;
       console.log(output);
     } else if (options.format === 'text') {
       predictions.forEach((obj, index) => {
