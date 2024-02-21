@@ -28,9 +28,11 @@ program
   .command('predict')
   .description('Predict the type of files')
   .argument('<files...>', 'files to predict')
+  .option('-p, --pretty', 'Pretty print the output')
   .action(async (files, options) => {
     const predictions = await Promise.all(files.map(makePrediction));
-    console.log(predictions);
+    const output = options.pretty ? JSON.stringify(predictions, null, 2) : JSON.stringify(predictions);
+    console.log(output);
   });
 
 program.parse();
